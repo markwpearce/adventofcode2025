@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	days.Day4part2()
+	days.Day5part2()
 }

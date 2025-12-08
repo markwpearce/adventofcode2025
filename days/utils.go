@@ -9,3 +9,15 @@ func removeEmptyStrings(parts []string) []string {
 	}
 	return filtered
 }
+
+func makeUnique(input []int) []int {
+	seen := make(map[int]bool)
+	uniquePositions := []int{}
+	for _, pos := range input {
+		if !seen[pos] {
+			seen[pos] = true
+			uniquePositions = append(uniquePositions, pos)
+		}
+	}
+	return uniquePositions
+}

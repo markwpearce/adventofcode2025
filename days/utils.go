@@ -1,5 +1,7 @@
 package days
 
+import "math"
+
 func removeEmptyStrings(parts []string) []string {
 	var filtered []string
 	for _, s := range parts {
@@ -20,4 +22,14 @@ func makeUnique(input []int) []int {
 		}
 	}
 	return uniquePositions
+}
+
+func distance(a []int, b []int) float64 {
+	if len(a) != len(b) {
+		return -1
+	}
+	dx := a[0] - b[0]
+	dy := a[1] - b[1]
+	dz := a[2] - b[2]
+	return math.Sqrt(float64(dx*dx + dy*dy + dz*dz))
 }
